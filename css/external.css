@@ -1,0 +1,47 @@
+.nav {
+    list-style-type: none;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 20px;
+    display: inline;
+}
+
+h1,
+h3,
+h5 {
+    color: rosybrown;
+    font-size: 36px;
+}
+
+h2,
+h4,
+h6 {
+    font-size: 48px; 
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    border: 20px groove cadetblue
+}
+
+b{ 
+    font-weight: 100;
+}
+
+p {
+    text-decoration: wavy overline;
+    font-size: 128px;
+}
+table,
+th{
+    float: right;
+    font-size: 24px; 
+}
+
+td,
+tr {
+    color: mediumslateblue;
+    text-shadow: 1px 2px 10px grey;
+}
