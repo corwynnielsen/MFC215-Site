@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <body>
 
-    <ul class="nav">
+    <!-- <ul class="nav">
         <li class="nav-item">
             <a href="inline.html">Inline</a>
         </li>
@@ -28,50 +28,107 @@
         <li class="nav-item">
             <a href="html5.html">HTML5</a>
         </li>
-    </ul>
+    </ul> -->
 
-    <!-- Me -->
+    <!-- Header -->
 
-    <h1>Corwyn Nielsen</h1>
-    <img src="img/pic_of_me.jpg" alt="Picture of me" width="208" height="320">
-
-    <!-- Introduction -->
-
-    <p>Hello!
-        <br>
-        <br> My name is Corwyn Nielsen and I am an undergrad studying
-        <br> Computer Science at University at Buffalo. While this is
-        <b>
-            <i>not</i>
-        </b> my
-        <br> first time writing a website, I look forward to learning interesting
-        <br> new things that I may have missed doing independent study.
-        <p>
-
-            <!-- Divider -->
-
+    <div class="header">
+        <img class="portrait" src="img/pic_of_me.jpg" alt="Picture of me">
+        <h1 class="name">Corwyn Nielsen</h1>
+        <p class="intro">
+            Hello!
             <br>
-            <hr>
-            <br>
+            <br> My name is Corwyn Nielsen and I am an undergrad studying
+            <br> Computer Science at University at Buffalo. While this is
+            <b>
+                <i>not</i>
+            </b> my
+            <br> first time writing a website, I look forward to learning interesting
+            <br> new things that I may have missed doing independent study.
+        </p>
+    </div>
 
-            <!-- Assignment List -->
+    <!-- Assignment List -->
 
-            <h2>
-                <b>Remaining Assignments:</b>
-            </h2>
-            <ol start="2">
-                <li>Create a set of CSS Web Pages</li>
-                <li>Create a CSS-styled Table Page</li>
-                <li>Create an HTML5/CSS3 Compliant Home Page</li>
-                <li>Modify Home Page to use Divs</li>
-                <li>Create an advanced CSS Web Page</li>
-                <li>What makes a good/bad Website Discussion</li>
-                <li>Create an HTML5 Form</li>
-                <li>Create a Multimedia Web Page</li>
-                <li>Create a Javascript Web Page</li>
-                <li>Use Javascript to Validate your Web Form</li>
-                <li>"Wow me!" Page</li>
-            </ol>
+    <div class="assignments">
+        <h2 class="assignment-header">
+            <b>Remaining Assignments</b>
+        </h2>
+        <div class="row">
+            <div class="col-4 light-teal rounded">
+                <h3>Create a set of CSS Web Pages</h3>
+                <p>Created a set of CSS based pages that used the various types of styles such as Embedded styles, Inline styles, and External styles.</p>
+                <p>Links: <a href="embedded.html">Embedded</a> <a href="inline.html">Inline</a> <a href="external.html">External</a></p>
+            </div>
+            <div class="col-4 light-teal rounded">
+                <h3>Create a CSS-styled Table Page</h3>
+                <p>A page of a quirky looking table created using html and CSS</p>
+                <p>Link: <a href="table.html">Table</a></p>
+            </div>
+            <div class="col-4 light-teal rounded">
+                <h3>Create an HTML5/CSS3 Compliant Home Page</h3>
+                <p>Create a HTML5 and CSS3 compliant page according to W3c standards</p>
+                <p>Link: <a href="html5.html">HTML5/CSS3 compliant page</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 light-teal rounded">
+                <h3>Modify Home Page to use Divs</h3>
+                <p>Change layout of index.html to use divs and CSS styling instead of the more boring regular HTML</p>
+                <p>Link: You're on it!</p>
+            </div>
+            <div class="col-4 light-teal rounded">
+                <h3>Create an advanced CSS Web Page</h3>
+                <p>Using some more advanced CSS techniques, I will create a more stylizied page.</p>
+                <p>Link: TBD</p>
+            </div>
+            <div class="col-4 light-teal rounded">
+                <h3>What makes a good/bad Website Discussion</h3>
+                <p>My personal opinions on a good and bad website and the corresponding reasoning behind my opinion.</p>
+                <p>Link: <a href="https://ublearns.buffalo.edu/webapps/discussionboard/do/message?action=list_messages&course_id=_151793_1&nav=discussion_board_entry&conf_id=_244035_1&forum_id=_376882_1&message_id=_4106519_1" target="_blank">Link to my post!</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 light-teal rounded">
+                <h3>Create an HTML5 Form</h3>
+                <p>I will be creating a form that takes in personal information such as one's first name, last name, phone number, and more.</p>
+                <p>Link: TBD</p>
+            </div>
+            <div class="col-4 light-teal rounded">
+                <h3>Create a Multimedia Web Page</h3>
+                <p>Using tags like video and audio, I will create a page displaying various forms of multimedia.</p>
+                <p>Link: TBD</p>
+            </div>
+            <div class="col-4 light-teal rounded">
+                <h3>Create a Javascript Web Page</h3>
+                <p>I will create a web page that displays that I have a basic understanding of the programming lanuage javascript by displaying metrics such as the current date and time.</p>
+                <p>Link: TBD</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 light-teal rounded">
+                <h3>Use Javascript to Validate your Web Form</h3>
+                <p>I will be making a small javascript applet to verify informating that is submitted via the form created from a previous assignment.</p>
+                <p>Link: TBD</p>
+            </div>
+            <div class="col-6 light-teal rounded">
+                <h3>"Wow me!" Page</h3>
+                <p>The free-for-all page or pages to "wow" professor Gerland. Lots of opportunities for cool stuff here!</p>
+                <p>Link: TBD</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="col-6">
+                <p>Editor used: VSCode</p>
+            </div>
+            <div class="col-6">
+                <p>Last Modified: 03-18-2018</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 
