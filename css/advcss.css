@@ -1,0 +1,39 @@
+.portrait {
+    height: 50px;
+    width: 50px;
+    float: right;
+}
+
+.intro {
+    font-family: Verdana, sans-serif;
+}
+
+table {
+    border: none;
+}
+
+@media print {
+    .intro {
+        font-family: Arial, sans-serif;
+    }
+
+    .portrait {
+        display: none;
+    }
+
+    .link {
+        color: green;
+    }
+
+    .link:visited {
+        color: green;
+    }
+
+    .assignment-item {
+        list-style-type: circle; 
+    }
+
+    table, td{
+        border: 1px solid black;
+    }
+}
