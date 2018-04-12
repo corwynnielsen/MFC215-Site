@@ -1,0 +1,35 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(to bottom right, hsl(60, 80%, 50%), hsl(0, 80%, 50%)),
+                space url('../img/V51c8qw.png') bottom right /48px;
+    background-blend-mode: multiply;
+}
+
+.form-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    color: white;
+    background: radial-gradient(hsl(0, 0%, 20%), hsl(0, 0%, 70%));
+    border: 2px hsl(0, 0%, 0%) solid;
+    height: 500px;
+    width: 500px;
+}
+
+#personal-info {
+    margin: auto;
+}
+
+#personal-info > fieldset > input,
+#personal-info > fieldset > select,
+#personal-info > fieldset > label {
+    margin: 5px 10px;
+}
