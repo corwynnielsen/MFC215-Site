@@ -1,0 +1,44 @@
+html,
+body { 
+    margin:0; 
+    padding:0; 
+    height:100%; 
+    width:100%;
+}
+
+/** Video
+ ---------------------------------------------------------*/
+
+.video-div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: url('../img/theatre.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.lady-in-red {
+    margin: auto auto 240px auto;
+    height: 600px;
+    width: 760px;
+}
+
+/** Audio
+ ---------------------------------------------------------*/
+
+/** Scrolling
+ ---------------------------------------------------------*/
+
+.scroll-parent {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.scroll {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    display: inline-block;
+    font-size: 36px;
+}
