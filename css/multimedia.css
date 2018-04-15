@@ -1,3 +1,6 @@
+/** General
+ ---------------------------------------------------------*/
+
 html,
 body { 
     margin:0; 
@@ -13,6 +16,7 @@ body {
     display: flex;
     height: 100%;
     width: 100%;
+    /*Source for image: http://ak3.picdn.net/shutterstock/videos/2070623/thumb/9.jpg*/
     background: url('../img/theatre.jpg') no-repeat center;
     background-size: cover;
 }
@@ -25,6 +29,14 @@ body {
 
 /** Audio
  ---------------------------------------------------------*/
+
+.china {
+    width: 100%;
+    height: 100%;
+    /*Source for gif: https://gfycat.com/gifs/detail/limpgeneralcopperhead*/
+    background: url('https://zippy.gfycat.com/LimpGeneralCopperhead.gif') no-repeat center;
+    background-size: cover;
+}
 
 /** Scrolling
  ---------------------------------------------------------*/
@@ -41,4 +53,6 @@ body {
     position: absolute;
     display: inline-block;
     font-size: 36px;
+    white-space: nowrap;
+    overflow: hidden;
 }
