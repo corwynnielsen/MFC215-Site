@@ -1,56 +1,61 @@
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
+function* range(begin, end) {
+    for (let i = begin; i <= end; i++){
+        yield i;
     }
-    return color;
+} 
+
+function dateUntilOrDateSinceDue(due) {
+    var day = 24*60*60*1000;
+    var now = Date.now();
+    var due = new Date(due);
+
+    if (now < due) {
+        return Math.round((due - now) / day);
+    } else {
+        return Math.round((now-due) / day)
+    }
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    var scroll_elem = document.getElementsByClassName('scroll')[0];
-    var scroll_elem_width = -scroll_elem.offsetWidth;
+function setupTimeDiv() {
+    var now = new Date(Date.now());
 
-    var position = scroll_elem_width;
+    var options = {
+        'hour' : '2-digit',
+        'minute' : '2-digit',
+        'second' : '2-digit'
+    };
+    
+    time_div = document.getElementsByClassName('time')[0];
 
-    setInterval(function() {
-        var w = window.innerWidth;
-        var scroll_elem_width = -scroll_elem.offsetWidth;
-        if(position < w) {
-            scroll_elem.style.left = position + 'px';
-            position++;
-        } else if(position == w) {
-            position = scroll_elem_width;
-            scroll_elem.style.left = position + 'px';
-        }
-    }, 1);
+    time_div.innerHTML = now.toLocaleString([], options);
 
-    var font_state = false;
-    var pulse = 36;
-    const max_pulse = 72;
+    setInterval(setupTimeDiv, 1000);
+}
 
-    setInterval(function() {
-        if (pulse == max_pulse) {
-            font_state = true
-        } else if (pulse == 36) {
-            font_state = false;
-        }
+function setupDateDiv() {
+    var now = new Date(Date.now());
 
-        if (pulse <= max_pulse && !font_state) {
-            pulse++;
-            scroll_elem.style.fontSize = pulse + 'px';
-        } else {
-            pulse--;
-            scroll_elem.style.fontSize = pulse + 'px';
-        }
-    }, 20);
+    var options = {
+        'day' : '2-digit',
+        'month' : 'long',
+        'year' : 'numeric'
+    };
 
-    var bod = document.getElementsByTagName('BODY')[0];
 
-    setInterval(function () {
-        bod.style.background = getRandomColor();
-    }, 500);
+    date_div = document.getElementsByClassName('date')[0];
+    date_div.innerHTML = now.toLocaleString([], options);
 
+    setInterval(setupDateDiv, 60000);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    assignment_time = document.createElement("DIV");
+    text = document.createTextNode(dateUntilOrDateSinceDue('April 23, 2018 11:59:00'));
+    assignment_time.appendChild(text);
+    document.body.appendChild(assignment_time);
+
+    setupTimeDiv();
+    
+    setupDateDiv();
 });
-
-
