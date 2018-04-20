@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/form.css" />
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html">Home</a>
+        <div class="date"></div>
+        <div class="time"></div>
+        <div class="button-menu">
+            <div>Button Menu</div>
+            <button class="change-background">Change The Background!</button>
+            <button class="change-font-color">Change The Font Color!</button>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="notice">Fields marked with a <span class="important-red">*</span> are required.</div>
+        <form id="personal-info" method="post" onsubmit="return validate()" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="first-name">First Name: </label>
+                <input id="first-name" name="first-name" form="personal-info" required><span class="important-red">*</span>
+                <br>
+                <label for="last-name">Last Name: </label>
+                <input id="last-name" name="last-name" form="personal-info" required><span class="important-red">*</span>
+                <br>
+                <label for="address">Address: </label>
+                <input id="address" name="address" form="personal-info">
+                <br>
+                <label for="city">City: </label>
+                <input id="city" name="city" form="personal-info">
+                <br>
+                <label for="state/province">State/Province</label>
+                <select id="state/province" name="state/province" form="personal-info">
+                    <option value="AL">Alabama (AL)</option>
+                    <option value="AK">Alaska (AK)</option>
+                    <option value="AZ">Arizona (AZ)</option>
+                    <option value="AR">Arkansas (AR)</option>
+                    <option value="CA">California (CA)</option>
+                    <option value="CO">Colorado (CO)</option>
+                    <option value="CT">Connecticut (CT)</option>
+                    <option value="DE">Delaware (DE)</option>
+                    <option value="DC">District Of Columbia (DC)</option>
+                    <option value="FL">Florida (FL)</option>
+                    <option value="GA">Georgia (GA)</option>
+                    <option value="HI">Hawaii (HI)</option>
+                    <option value="ID">Idaho (ID)</option>
+                    <option value="IL">Illinois (IL)</option>
+                    <option value="IN">Indiana (IN)</option>
+                    <option value="IA">Iowa (IA)</option>
+                    <option value="KS">Kansas (KS)</option>
+                    <option value="KY">Kentucky (KY)</option>
+                    <option value="LA">Louisiana (LA)</option>
+                    <option value="ME">Maine (ME)</option>
+                    <option value="MD">Maryland (MD)</option>
+                    <option value="MA">Massachusetts (MA)</option>
+                    <option value="MI">Michigan (MI)</option>
+                    <option value="MN">Minnesota (MN)</option>
+                    <option value="MS">Mississippi (MS)</option>
+                    <option value="MO">Missouri (MO)</option>
+                    <option value="MT">Montana (MT)</option>
+                    <option value="NE">Nebraska (NE)</option>
+                    <option value="NV">Nevada (NV)</option>
+                    <option value="NH">New Hampshire (NH)</option>
+                    <option value="NJ">New Jersey (NJ)</option>
+                    <option value="NM">New Mexico (NM)</option>
+                    <option value="NY">New York (NY)</option>
+                    <option value="NC">North Carolina (NC)</option>
+                    <option value="ND">North Dakota (ND)</option>
+                    <option value="OH">Ohio (OH)</option>
+                    <option value="OK">Oklahoma (OK)</option>
+                    <option value="OR">Oregon (OR)</option>
+                    <option value="PA">Pennsylvania (PA)</option>
+                    <option value="RI">Rhode Island (RI)</option>
+                    <option value="SC">South Carolina (SC)</option>
+                    <option value="SD">South Dakota (SD)</option>
+                    <option value="TN">Tennessee (TN)</option>
+                    <option value="TX">Texas (TX)</option>
+                    <option value="UT">Utah (UT)</option>
+                    <option value="VT">Vermont (VT)</option>
+                    <option value="VA">Virginia (VA)</option>
+                    <option value="WA">Washington (WA)</option>
+                    <option value="WV">West Virginia (WV)</option>
+                    <option value="WI">Wisconsin (WI)</option>
+                    <option value="WY">Wyoming (WY)</option>
+                </select>
+                <br>
+                <label for="zip/postal-code">Zip/Postal Code</label>
+                <input id="zip/postal-code" type="text" pattern="\d{5}" name="zip" form="personal-info" required><span class="important-red">*</span>
+                <br>
+                <label for="phone">Phone Number: </label>
+                <input id="phone" type="tel" name="phone" form="personal-info" required><span class="important-red">*</span>
+                <br>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" form="personal-info" required><span class="important-red">*</span>
+                <br>
+                <input type="submit" value="OK Send My Data" name="submit">
+            </fieldset>
+        </form>
+    </div>
+    <script src="js/validation.js"></script>
+</body>
+
+</html>
