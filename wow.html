@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>'Wow Me!' Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/wow.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#instructions">Game Instructions</a>
+            <a href="#game">Game</a>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <section class="instructions" id="instructions">
+            <div class="container">
+                <div class="text-container">
+                    <h1>Instructions:</h1>
+                    <p>Use the arrow keys on your keyboard to move around the cube.<br>Your goal is to collect all the coins in the maze. As you collect coins, your player cube will grow in size.<br> A little bit of info about the player such as the size and score are displayed to the right of the game.<br> <b><u>Note:</u></b> The player starts out quite small so look carefully for the cube.<br>Have fun!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="game" id="game">
+            <h1>The Maze Game</h1>
+            <div class="container">
+                <div id="canvas1"></div>
+                <div id="canvas2"></div>
+            </div>
+        </section>
+
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Notes about the project:
+            This project was coded using a library called p5.js which streamlines the use of the html canvas into a more user friendly process. In order to generate the maze, the program uses a Depth First Search (DFS) traversal.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/helpers/player.js"></script>
+    <script src="js/helpers/tile.js"></script>
+    <script src="js/helpers/coin.js"></script>
+</body>
+
+</html>

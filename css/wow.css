@@ -1,0 +1,86 @@
+html,
+body {
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+nav {
+    text-align: center;
+    background: hsl(0, 65%, 55%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: hsl(59, 100%, 70%);
+}
+
+.container {
+    color: hsl(59, 100%, 70%);
+    padding: 50px;
+    display: flex;
+}
+
+.main {
+    margin-top: 48px;
+}
+
+.instructions {
+    background: hsl(0, 65%, 65%);
+    text-align: center;
+}
+
+.text-container {
+    margin: auto;
+}
+
+.text-container h1 {
+    font-size: 48px;
+}
+
+.text-container p {
+    font-size: 24px;
+}
+
+.game {
+    background: hsl(0, 65%, 75%);
+}
+
+.game h1 {
+    color: hsl(59, 100%, 70%);
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+    font-size: 48px;
+}
+
+#canvas1,
+#canvas2 {
+    margin: auto;
+    display: inline-block;
+}
+
+footer {
+    background: hsl(0, 65%, 65%);
+    font-size: 18px;
+}
+
+footer .container p {
+    text-align: center;
+    margin: auto;
+}
