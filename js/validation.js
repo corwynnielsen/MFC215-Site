@@ -1,8 +1,25 @@
+const isIE = /*@cc_on!@*/false || !!document.documentMode;
+const isEdge = !isIE && !!window.StyleMedia;
+
+function getRandomColor() {
+    hue = Math.floor(Math.random() * 359);
+    sat = Math.floor(Math.random() * 100) + '%';
+    lightness = Math.floor(Math.random() * 100) + '%';
+
+    return 'hsl(' + hue + ',' + sat + ',' + lightness + ')';
+}
+
 /**
  * Changes the background filter to something random
  */
 
 function changeBackground() {
+
+    if(isEdge || isIE) {
+        let rand = getRandomColor();
+        document.body.style['background'] = rand;
+    }
+
     let options = ['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity']
     let current_mode = document.body.style["background-blend-mode"];
     let random_mode = options[Math.floor(Math.random() * options.length)];
@@ -19,12 +36,7 @@ function changeBackground() {
  */
 
 function changeFontColor() {
-
-    hue = Math.floor(Math.random() * 359);
-    sat = Math.floor(Math.random() * 100) + '%';
-    lightness = Math.floor(Math.random() * 100) + '%';
-    color = 'hsl(' + hue + ',' + sat + ',' + lightness, ');';
-    
+    let color = getRandomColor();
     document.body.style['color'] = color;
     document.getElementsByClassName('form-container')[0].style['color'] = color;
 }
@@ -47,18 +59,23 @@ function validate() {
     let email_regex = /\w+@\w+.\w{2,}/
 
     if (first.value.length <= 0) {
+        alert("Please enter your first name.");
         first.focus();
         return false;
     } else if (last.value.length <= 0) {
+        alert("Please enter your last name.");
         last.focus();
         return false;
     } else if (zip_code.value.length != 5 && zip_code.value.length != 9 && !zip_regex.test(zip_code.value)) {
+        alert("Please enter a valid zip code.");
         zip_code.focus();
         return false;
     } else if (phone.value.length != 10 && !phone_regex.test(phone.value)) {
+        alert("Please enter a valid phone number.");
         phone.focus();
         return false;
     } else if (!email_regex.test(email.value)) {
+        alert("Please enter a valid email address.");
         email.focus();
         return false;
     } else {
@@ -106,11 +123,11 @@ function setupDateDiv() {
     setInterval(setupDateDiv, 60000);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     setupDateDiv();
     setupTimeDiv();
-    
+
     // Button listeners
     document.getElementsByClassName('change-background')[0].addEventListener('click', changeBackground);
     document.getElementsByClassName('change-font-color')[0].addEventListener('click', changeFontColor);
